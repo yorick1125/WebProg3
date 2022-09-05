@@ -1,0 +1,16 @@
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\bin\Debug\net5.0\MyClasses.exe
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\bin\Debug\net5.0\MyClasses.deps.json
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\bin\Debug\net5.0\MyClasses.runtimeconfig.json
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\bin\Debug\net5.0\MyClasses.runtimeconfig.dev.json
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\bin\Debug\net5.0\MyClasses.dll
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\bin\Debug\net5.0\ref\MyClasses.dll
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\bin\Debug\net5.0\MyClasses.pdb
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.AssemblyInfoInputs.cache
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.AssemblyInfo.cs
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.csproj.CoreCompileInputs.cache
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.dll
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\ref\MyClasses.dll
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.pdb
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.genruntimeconfig.cache
+C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.csproj.AssemblyReference.cache
