@@ -14,3 +14,19 @@ C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assig
 C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.pdb
 C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.genruntimeconfig.cache
 C:\Users\Claudiu\OneDrive - John Abbott College\Fall 2022\Web3\Assignments\Assignment 1 - Interfaces\Assignment4_Net5_Auto_Grading_Solution\MyClasses\obj\Debug\net5.0\MyClasses.csproj.AssemblyReference.cache
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\bin\Debug\net5.0\MyClasses.exe
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\bin\Debug\net5.0\MyClasses.deps.json
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\bin\Debug\net5.0\MyClasses.runtimeconfig.json
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\bin\Debug\net5.0\MyClasses.runtimeconfig.dev.json
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\bin\Debug\net5.0\MyClasses.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\bin\Debug\net5.0\ref\MyClasses.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\bin\Debug\net5.0\MyClasses.pdb
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\obj\Debug\net5.0\MyClasses.csproj.AssemblyReference.cache
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\obj\Debug\net5.0\MyClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\obj\Debug\net5.0\MyClasses.AssemblyInfoInputs.cache
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\obj\Debug\net5.0\MyClasses.AssemblyInfo.cs
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\obj\Debug\net5.0\MyClasses.csproj.CoreCompileInputs.cache
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\obj\Debug\net5.0\MyClasses.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\obj\Debug\net5.0\ref\MyClasses.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\obj\Debug\net5.0\MyClasses.pdb
+C:\Users\Yoric\Documents\GitHub\WebProg3\Assignment1-TestSuite-Net5-Student\MyClasses\obj\Debug\net5.0\MyClasses.genruntimeconfig.cache

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gXjeYEtmwqnaz2CwzWqKWllNS9kHDb2HkFed12u3RnxOVfl+TQ8YnG/l0uIKkk2gUn50myxIbkoCEEtlLEI2ug==",
+  "dgSpecHash": "cBiZUehgFCioitl0qc6PNH+YXnaJrwTqNG0cF7ZBZMGCm7QeqcbUQxJjA5b2uPKP/evWlm0kpFeyxSsqQ03Yjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yoric\\Desktop\\College\\Semester 7\\WebProg3\\Assignment1-TestSuite-Net5-Student\\MyClassesTest\\MyClassesTest.csproj",
+  "projectFilePath": "C:\\Users\\Yoric\\Documents\\GitHub\\WebProg3\\Assignment1-TestSuite-Net5-Student\\MyClassesTest\\MyClassesTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yoric\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
