@@ -74,6 +74,124 @@ namespace MyClassesTest
         }
 
         [TestMethod]
+        public void CookieOrderEqualsTrue()
+        {
+            try
+            {
+                uint quantity = 24;
+                //public CookieOrder(string customerName_, uint orderNumber_, uint quantity_, string cookieType_)
+                CookieOrder order = new CookieOrder("Philip", ++orderNumber, quantity, "Nutella Cookies");
+                CookieOrder order2 = new CookieOrder("Philip", orderNumber, quantity, "Nutella Cookies");
+
+                Assert.IsTrue(order.Equals(order2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Problem with checking equality in Cookie orders.");
+            }
+        }
+
+        [TestMethod]
+        public void CookieOrderEqualsFalse()
+        {
+            try
+            {
+                uint quantity = 24;
+                //public CookieOrder(string customerName_, uint orderNumber_, uint quantity_, string cookieType_)
+                CookieOrder order = new CookieOrder("Philip", ++orderNumber, quantity, "Nutella Cookies");
+                CookieOrder order2 = new CookieOrder("Php", ++orderNumber, 99999, "Nutella");
+
+                Assert.IsFalse(order.Equals(order2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Problem with checking equality in Cookie orders.");
+            }
+        }
+
+        [TestMethod]
+        public void CookieOrderToString()
+        {
+            try
+            {
+                uint quantity = 24;
+                //public CookieOrder(string customerName_, uint orderNumber_, uint quantity_, string cookieType_)
+                CookieOrder order = new CookieOrder("Philip", ++orderNumber, quantity, "Nutella Cookies");
+                Assert.IsTrue(order.ToString().Contains(order.OrderNumber.ToString()));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Problem with checking equality in Cookie orders.");
+            }
+        }
+
+        [TestMethod]
+        public void CookieOrderGetHashCode()
+        {
+            uint quantity = 24;
+            CookieOrder c = new CookieOrder("Philip", ++orderNumber, quantity, "Nutella Cookies");
+            CookieOrder c2 = new CookieOrder("Philip", orderNumber, quantity, "Nutella Cookies");
+            HashSet<CookieOrder> orders = new HashSet<CookieOrder>();
+            orders.Add(c);
+            orders.Add(c2);
+
+            Assert.IsTrue(c.GetHashCode() == c2.GetHashCode());
+            Assert.IsTrue(orders.Count == 1);
+        }
+
+        [TestMethod]
+        public void SpecialCookieOrderEqualsTrue()
+        {
+            try
+            {
+                uint quantity = 24;
+                //public CookieOrder(string customerName_, uint orderNumber_, uint quantity_, string cookieType_)
+                SpecialCookieOrder order = new SpecialCookieOrder("Philip", ++orderNumber, quantity, "Nutella Cookies", "extra nutella");
+                SpecialCookieOrder order2 = new SpecialCookieOrder("Philip", orderNumber, quantity, "Nutella Cookies", "extra nutella");
+
+                Assert.IsTrue(order.Equals(order2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Problem with checking equality in Cookie orders.");
+            }
+        }
+
+        [TestMethod]
+        public void SpecialCookieOrderEqualsFalse()
+        {
+            try
+            {
+                uint quantity = 24;
+                //public CookieOrder(string customerName_, uint orderNumber_, uint quantity_, string cookieType_)
+                SpecialCookieOrder order = new SpecialCookieOrder("Philip", ++orderNumber, quantity, "Nutella Cookies", "extra nutella");
+                SpecialCookieOrder order2 = new SpecialCookieOrder("George", ++orderNumber, 99999, "Nutella", "extra nutella");
+
+                Assert.IsFalse(order.Equals(order2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Problem with checking equality in Cookie orders.");
+            }
+        }
+
+        [TestMethod]
+        public void SpecialCookieOrderToString()
+        {
+            try
+            {
+                uint quantity = 24;
+                //public CookieOrder(string customerName_, uint orderNumber_, uint quantity_, string cookieType_)
+                SpecialCookieOrder order = new SpecialCookieOrder("Philip", ++orderNumber, quantity, "Nutella Cookies", "extra nutella");
+                Assert.IsTrue(order.ToString().Contains(order.Description.ToString()));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Problem with checking equality in Cookie orders.");
+            }
+        }
+
+        [TestMethod]
         public void SpecialCookieOrderMoreThanTwoDozen()
         {
             try
@@ -179,6 +297,19 @@ namespace MyClassesTest
         {
             try
             {
+                Employee e = new Employee("Mike", 934024);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Employee constructor with 2 parameters");
+            }
+        }
+
+        [TestMethod]
+        public void EmployeeCons2Param2Names()
+        {
+            try
+            {
                 Employee e = new Employee("Mike C", 934024);
             }
             catch (Exception e)
@@ -270,11 +401,25 @@ namespace MyClassesTest
         }
 
         [TestMethod]
+        public void EmployeeGetHashCode()
+        {
+            //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
+            Employee e = new Employee(93402, "Mike", "Cooper", "IT", "Vice-President", 250000m);
+            Employee e2 = new Employee(93402, "Mike", "Cooper", "IT", "Vice-President", 250000m);
+            HashSet<Employee> employees = new HashSet<Employee>();
+            employees.Add(e);
+            employees.Add(e2);
+
+            Assert.IsTrue(e.GetHashCode() == e2.GetHashCode());
+            Assert.IsTrue(employees.Count == 1);
+        }
+
+        [TestMethod]
         public void EmployeeGenerate25UniqueEmployee()
         {
             try
             {
-                int employeeSize = 5;
+                int employeeSize = 25;
                 //returns 25 different employees
                 List<Employee> employeeList = Util.GenerateEmployees();
                 
@@ -425,6 +570,111 @@ namespace MyClassesTest
         List<MultiUnits> multi;
 
         [TestMethod]
+        public void SingleFamilyCreate()
+        {
+            try
+            {
+                SingleFamily singleFamily = new SingleFamily();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+
+        [TestMethod]
+        public void SingleFamilyGetNumBedrooms()
+        {
+            try
+            {
+                SingleFamily singleFamily = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
+                Assert.AreEqual(4, singleFamily.NumberBedrooms);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void SingleFamilySetNumBedrooms()
+        {
+            try
+            {
+                SingleFamily singleFamily = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
+                singleFamily.NumberBedrooms = 5;
+                Assert.AreEqual(5, singleFamily.NumberBedrooms);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void SingleFamilyGetNumGarages()
+        {
+            try
+            {
+                SingleFamily singleFamily = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
+                Assert.AreEqual(1, singleFamily.NumberGarages);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void SingleFamilySetNumGarages()
+        {
+            try
+            {
+                SingleFamily singleFamily = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
+                singleFamily.NumberGarages = 2;
+                Assert.AreEqual(2, singleFamily.NumberGarages);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void SingleFamilyGetSize()
+        {
+            try
+            {
+                SingleFamily singleFamily = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
+                Assert.AreEqual(2500, singleFamily.Size);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void SingleFamilySetSize()
+        {
+            try
+            {
+                SingleFamily singleFamily = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
+                singleFamily.Size = 8;
+                Assert.AreEqual(8, singleFamily.Size);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
         public void SingleFamilyCreateList()
         {
             try
@@ -450,7 +700,7 @@ namespace MyClassesTest
         {
             try
             {
-                privateHome = new List<SingleFamily>
+                 privateHome = new List<SingleFamily>
                 {
                     //new SingleFamily(string addr, int beds, int baths, decimal rent)
                     new SingleFamily("34 Winston Street", 3, 2, 900.00m),
@@ -463,6 +713,64 @@ namespace MyClassesTest
             {
                 Assert.Fail(e.Message);
             }
+        }
+
+        [TestMethod]
+        public void SingleFamilyEqualsTrue()
+        {
+            try
+            {
+                privateHome = new List<SingleFamily>
+                {
+                    //new SingleFamily(string addr, int beds, int baths, decimal rent)
+                    new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4),
+                    new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4)
+
+                };
+
+
+                Assert.IsTrue(privateHome[0].Equals(privateHome[1]));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void SingleFamilyEqualsFalse()
+        {
+            try
+            {
+                privateHome = new List<SingleFamily>
+                {
+                    //new SingleFamily(string addr, int beds, int baths, decimal rent)
+                    new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4),
+                    new SingleFamily("21 Winston Street", 3, 2, 900.00m, 2500, 1, 4)
+
+                };
+
+
+                Assert.IsFalse(privateHome[0].Equals(privateHome[1]));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void SingleFamilyGetHashCode()
+        {
+            //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
+            SingleFamily f = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
+            SingleFamily f2 = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
+            HashSet<SingleFamily> families = new HashSet<SingleFamily>();
+            families.Add(f);
+            families.Add(f2);
+
+            Assert.IsTrue(f.GetHashCode() == f2.GetHashCode());
+            Assert.IsTrue(families.Count == 1);
         }
 
         [TestMethod]
@@ -487,6 +795,32 @@ namespace MyClassesTest
         }
 
         [TestMethod]
+        public void MultiUnitCreate()
+        {
+            try
+            {
+                MultiUnits multiUnits = new MultiUnits();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void MultiUnitCons1Param()
+        {
+            try
+            {
+                MultiUnits multiUnits = new MultiUnits("8674 Victoria Lane");
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
         public void MultiUnitCreateList()
         {
             try
@@ -497,6 +831,7 @@ namespace MyClassesTest
                     new MultiUnits("8674 Victoria Lane", 2, 750.00m),
                     new MultiUnits("9724 Bridge Street", 2, 700.00m)
                 };
+                Assert.IsTrue(multi[0].ToString().Contains("8674 Victoria Lane"));
             }
             catch (Exception e)
             {
@@ -505,7 +840,38 @@ namespace MyClassesTest
         }
 
         [TestMethod]
-        public void MultiUnitYearlyRentAmount()
+        public void MultiUnitGetAddress()
+        {
+            try
+            {
+                MultiUnits multiUnits = new MultiUnits("8674 Victoria Lane", 2, 750.00m);
+                multiUnits.Address = "8674 Victoria Lane";
+                Assert.AreEqual(multiUnits.Address, "8674 Victoria Lane");
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void MultiUnitsGetHashCode()
+        {
+            //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
+            MultiUnits mu = new MultiUnits("8674 Victoria Lane", 2, 750.00m);
+            MultiUnits mu2 = new MultiUnits("8674 Victoria Lane", 2, 750.00m);
+            HashSet<MultiUnits> families = new HashSet<MultiUnits>();
+            families.Add(mu);
+            families.Add(mu2);
+
+            Assert.IsTrue(mu.GetHashCode() == mu2.GetHashCode());
+            Assert.IsTrue(families.Count == 1);
+        }
+
+
+
+        [TestMethod]
+        public void MultiUnitsYearlyRentAmount()
         {
             try
             {
@@ -523,6 +889,196 @@ namespace MyClassesTest
             {
                 Assert.Fail(e.Message);
             }
+        }
+
+        [TestMethod]
+        public void MultiUnitsEqualsFalse()
+        {
+            try
+            {
+                MultiUnits housing = new MultiUnits("9724 Bridge Street", 2, 700.00m);
+                MultiUnits housing2 = new MultiUnits("9724 Bridge Street", 4, 700.00m);
+                Assert.IsFalse(housing.Equals(housing2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void MultiUnitsEqualsTrue()
+        {
+            try
+            {
+                MultiUnits housing = new MultiUnits("9724 Bridge Street", 2, 700.00m);
+                MultiUnits housing2 = new MultiUnits("9724 Bridge Street", 2, 700.00m);
+                Assert.IsTrue(housing.Equals(housing2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingCreate()
+        {
+            try
+            {
+                Housing housing = new Housing();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingCons1Param()
+        {
+            try
+            {
+                Housing housing = new Housing(2019);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingCons5Param()
+        {
+            try
+            {
+                Housing housing = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true );
+                Assert.IsTrue(housing.ToString().Contains("9724"));
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingPropYear()
+        {
+            try
+            {
+                Housing housing = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                housing.Year = 2020;
+                Assert.IsTrue(housing.Year == 2020);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingPropAddress()
+        {
+            try
+            {
+                Housing housing = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                housing.Address = "4378 Maple Street";
+                Assert.IsTrue(housing.Address == "4378 Maple Street");
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingPropConstructionType()
+        {
+            try
+            {
+                Housing housing = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                housing.ConstructionType = "Type 3";
+                Assert.IsTrue(housing.ConstructionType == "Type 3");
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingPropCleaningCrew()
+        {
+            try
+            {
+                Housing housing = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                housing.CleaningCrew = "Montreal Cleaning Specialists";
+                Assert.IsTrue(housing.CleaningCrew == "Montreal Cleaning Specialists");
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingPropInsuranceClaimHistory()
+        {
+            try
+            {
+                Housing housing = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                housing.InsuranceClaimHistory = false;
+                Assert.IsTrue(housing.InsuranceClaimHistory == false);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingEqualsTrue()
+        {
+            try
+            {
+                Housing housing = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                Housing housing2 = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                Assert.IsTrue(housing.Equals(housing2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingEqualsFalse()
+        {
+            try
+            {
+                Housing housing = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                Housing housing2 = new Housing(2020, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                Assert.IsFalse(housing.Equals(housing2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void HousingGetHashCode()
+        {
+            //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
+            Housing h = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+            Housing h2 = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+            HashSet<Housing> families = new HashSet<Housing>();
+            families.Add(h);
+            families.Add(h2);
+
+            Assert.IsTrue(h.GetHashCode() == h2.GetHashCode());
+            Assert.IsTrue(families.Count == 1);
         }
 
         #endregion
@@ -569,11 +1125,110 @@ namespace MyClassesTest
                 Letter CertLetter = new Letter(DateTime.Now, "Claudiu S.");
 
                 Assert.IsTrue(CertLetter.ToString().Contains("Claudiu"));
+
             }
             catch (Exception e)
             {
                 Assert.Fail(e.Message);
             }
+        }
+
+        [TestMethod]
+        public void LetterEqualsTrue()
+        {
+            try
+            {
+                //public Letter(DateTime date_, string recipient_)
+                DateTime date = DateTime.Now;
+                Letter Letter = new Letter(date, "Claudiu S.");
+                Letter Letter2 = new Letter(date, "Claudiu S.");
+
+                Assert.IsTrue(Letter.Equals(Letter2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void LetterEqualsFalse()
+        {
+            try
+            {
+                //public Letter(DateTime date_, string recipient_)
+                Letter Letter = new Letter(DateTime.Now, "Claudiu S.");
+                Letter Letter2 = new Letter(DateTime.Now, "Larry");
+
+                Assert.IsFalse(Letter.Equals(Letter2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void LetterGetHashCode()
+        {
+            DateTime date = DateTime.Now;
+            Letter l = new Letter(date, "Claudiu S.");
+            Letter l2 = new Letter(date, "Claudiu S.");
+            HashSet<Letter> letters = new HashSet<Letter>();
+            letters.Add(l);
+            letters.Add(l2);
+
+            Assert.IsTrue(l.GetHashCode() == l2.GetHashCode());
+            Assert.IsTrue(letters.Count == 1);
+        }
+
+        [TestMethod]
+        public void CertifiedLetterEqualsTrue()
+        {
+            try
+            {
+                //public Letter(DateTime date_, string recipient_)
+                DateTime date = DateTime.Now;
+                CertifiedLetter Letter = new CertifiedLetter(18271, date, "Claudiu S.");
+                CertifiedLetter Letter2 = new CertifiedLetter(18271, date, "Claudiu S.");
+
+                Assert.IsTrue(Letter.Equals(Letter2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void CertifiedLetterEqualsFalse()
+        {
+            try
+            {
+                //public CertifiedLetter(DateTime date_, string recipient_)
+                CertifiedLetter Letter = new CertifiedLetter(18271, DateTime.Now, "Claudiu S.");
+                CertifiedLetter Letter2 = new CertifiedLetter(18271, DateTime.Now, "Larry");
+
+                Assert.IsFalse(Letter.Equals(Letter2));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void CertifiedLetterGetHashCode()
+        {
+            DateTime date = DateTime.Now;
+            CertifiedLetter l = new CertifiedLetter(18271, date, "Claudiu S.");
+            CertifiedLetter l2 = new CertifiedLetter(18271, date, "Claudiu S.");
+            HashSet<CertifiedLetter> letters = new HashSet<CertifiedLetter>();
+            letters.Add(l);
+            letters.Add(l2);
+
+            Assert.IsTrue(l.GetHashCode() == l2.GetHashCode());
+            Assert.IsTrue(letters.Count == 1);
         }
 
         #endregion

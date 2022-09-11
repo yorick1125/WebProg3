@@ -8,9 +8,9 @@ namespace Assignment1
 {
     public class CookieOrder
     {
-        public const decimal WHOLESALEPRICE = 1.5m;
-        public const decimal REGULARPRICE = 2.25m;
-        public const int MIN_QUANTITY_FOR_WHOLESALEPRICE = 24;
+        public static decimal WHOLESALEPRICE = 1.5m;
+        public static decimal REGULARPRICE = 2.25m;
+        public static int MIN_QUANTITY_FOR_WHOLESALEPRICE = 24;
 
         public string CustomerName { get; set; }
         public uint OrderNumber { get; set; }
@@ -59,8 +59,7 @@ namespace Assignment1
 
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return HashCode.Combine(CustomerName, OrderNumber, Quantity, CookieType, TotalPrice);
         }
-
     }
 }

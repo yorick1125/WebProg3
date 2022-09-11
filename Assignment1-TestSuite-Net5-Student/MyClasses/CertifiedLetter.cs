@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment1
 {
-    public class CertifiedLetter : Letter
+    public class CertifiedLetter : Letter 
     {
         public long TrackingNumber { get; set; }
 
@@ -18,6 +18,18 @@ namespace Assignment1
         public override string ToString()
         {
             return base.ToString() + "Tracking Number: " + TrackingNumber;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is CertifiedLetter letter &&
+                   base.Equals(obj) &&
+                   TrackingNumber == letter.TrackingNumber;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(base.GetHashCode(), Date, Recipient, TrackingNumber);
         }
     }
 }

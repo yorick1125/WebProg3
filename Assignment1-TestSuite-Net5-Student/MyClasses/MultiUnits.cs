@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Assignment1
 {
-    public class MultiUnits : IUnits
+    public class MultiUnits : Housing, IUnits
     {
+        public const int MONTHSINAYEAR = 12;
+
         public string Address { get; set; }
         public int NoOfUnits { get; set; }
         public decimal RentAmountPerUnit { get; set; }
@@ -28,7 +30,27 @@ namespace Assignment1
 
         public decimal ProjectedRentalAmt()
         {
-            throw new NotImplementedException();
+            return RentAmountPerUnit * NoOfUnits * MONTHSINAYEAR;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is MultiUnits units &&
+                   Address == units.Address &&
+                   NoOfUnits == units.NoOfUnits &&
+                   RentAmountPerUnit == units.RentAmountPerUnit;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Address, NoOfUnits, RentAmountPerUnit);
+        }
+
+        public override string ToString()
+        {
+            return "Address: " + Address + "\n" +
+                    "Number of Units: " + NoOfUnits + "\n" +
+                    "Monthly Rent Per Unit: " + RentAmountPerUnit + "\n";
         }
     }
 }

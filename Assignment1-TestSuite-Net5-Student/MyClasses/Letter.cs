@@ -22,5 +22,17 @@ namespace Assignment1
             return "Date: " + Date + "\n" +
                 "Recipient: " + Recipient;
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Letter letter &&
+                   Date == letter.Date &&
+                   Recipient == letter.Recipient;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Date, Recipient);
+        }
     }
 }

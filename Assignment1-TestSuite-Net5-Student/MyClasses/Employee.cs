@@ -35,8 +35,18 @@ namespace Assignment1
         public Employee(string name_, uint idNumber_)
         {
             Id = idNumber_;
-            FirstName = name_.Split(" ")[0];
-            LastName = name_.Split(" ")[1];
+            string[] names = name_.Split(" ");
+            if(names.Length > 1)
+            {
+                FirstName = name_.Split(" ")[0];
+                LastName = name_.Split(" ")[1];
+            }
+            else
+            {
+                FirstName = name_.Split(" ")[0];
+
+            }
+
         }
 
 
@@ -74,9 +84,7 @@ namespace Assignment1
 
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return HashCode.Combine(Id, FirstName, LastName, Department, Position, Salary);
         }
-
-
     }
 }

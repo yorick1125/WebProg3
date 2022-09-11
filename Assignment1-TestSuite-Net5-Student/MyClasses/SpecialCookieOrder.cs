@@ -8,7 +8,7 @@ namespace Assignment1
 {
     public class SpecialCookieOrder : CookieOrder
     {
-        public const decimal HANDLINGFEE = 5m;
+        public static decimal HANDLINGFEE = 5m;
         public string Description { get; set; }
         public SpecialCookieOrder(string customerName_, uint orderNumber_, uint quantity_, string cookieType_, string description_) : base(customerName_, orderNumber_, quantity_, cookieType_)
         {

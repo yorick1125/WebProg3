@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment1
 {
-    class Housing
+    public class Housing
     {
 
         public int Year { get; set; }
@@ -30,6 +30,31 @@ namespace Assignment1
             ConstructionType = constructionType_;
             CleaningCrew = cleaningCrew_;
             InsuranceClaimHistory = insuranceClaimHistory_;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Housing housing &&
+                   Year == housing.Year &&
+                   Address == housing.Address &&
+                   ConstructionType == housing.ConstructionType &&
+                   CleaningCrew == housing.CleaningCrew &&
+                   InsuranceClaimHistory == housing.InsuranceClaimHistory;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Year, Address, ConstructionType, CleaningCrew, InsuranceClaimHistory);
+        }
+
+        public override string ToString()
+        {
+            return
+                "Year: " + Year + " \n" +
+                "Address: " + Address + " \n" +
+                "Construction Type: " + ConstructionType + " \n" +
+                "Cleaning Crew: " + CleaningCrew + " \n" +
+                "Insurance Claim History: " + InsuranceClaimHistory + " \n";
         }
 
     }
