@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+* Course: 		Web Programming 3
+* Assessment: 	Assignment 1
+* Created by: 	Yorick-Ntwari Niyonkuru
+* Date: 		10 September 2022
+* Class Name: 	CertifiedLetter.cs
+* Description: 	Stores all data regarding certified letters.
+    */ 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +26,8 @@ namespace Assignment1
 
         public override string ToString()
         {
-            return base.ToString() + "Tracking Number: " + TrackingNumber;
+            return base.ToString() + "\n" + 
+                "Tracking Number: " + TrackingNumber;
         }
 
         public override bool Equals(object obj)

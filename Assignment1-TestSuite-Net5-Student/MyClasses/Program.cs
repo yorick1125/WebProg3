@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace Assignment1
 {
@@ -10,15 +11,38 @@ namespace Assignment1
     {
         public static void Main(string[] args)
         {
+            int choice = -1;
+            do
+            {
+                WriteLine("Hello! Please select an option: ");
+                WriteLine("[1] Employee Winners");
+                WriteLine("[2] SendLetter");
+                WriteLine("[3] CookieBakery");
+                WriteLine("[4] Housing System");
+                choice = Util.GetIntInput(ReadLine(), 1, 4);
+                Clear();
+                switch (choice) 
+                {
+                    case 1:
+                        EmployeeWinners();
+                        break;
+                    case 2:
+                        SendLetter();
+                        break;
+                    case 3:
+                        Cookies();
+                        break;
+                    case 4:
+                        Housing();
+                        break;
+                }
+                WriteLine("Press any key to go back to the main menu...");
+                ReadKey();
+                Clear();
 
-            // 1. Employee
-            EmployeeWinners();
+            } while (choice != 0);
 
-            // 2. Letters 
-            //SendLetter();
-
-            // 3. 
-            //Cookies();
+            WriteLine("Exiting Program...");
 
         }
 
@@ -26,105 +50,112 @@ namespace Assignment1
         {
             List<Employee> employees = Util.GenerateEmployees();
 
-            Console.WriteLine("Here is your list of employees: ");
+            WriteLine("Here is your list of employees: ");
             foreach(Employee employee in employees)
             {
-                Console.WriteLine(employee.ToString());
-                Console.WriteLine("------------------------------------");
+                WriteLine(employee.FirstName + " " + employee.LastName);
             }
 
-            Console.WriteLine("Press enter to generate five winners and three winners. ");
-            Console.ReadLine();
+            WriteLine("Press enter to generate five winners and three winners. ");
+            ReadLine();
             List<Employee> winners = Util.PickWinners(employees, 5);
-            Console.WriteLine("Here are five winners: ");
-            Console.WriteLine("Platinum: \n" + winners[0]);
-            Console.WriteLine("Gold: \n" + winners[1]);
-            Console.WriteLine("Silver: \n" + winners[2]);
-            Console.WriteLine("Bronze: \n" + winners[3]);
-            Console.WriteLine("Fifth: \n" + winners[4]);
+            WriteLine("Here are five winners: ");
+            WriteLine("Platinum: \n" + winners[0]);
+            WriteLine("Gold: \n" + winners[1]);
+            WriteLine("Silver: \n" + winners[2]);
+            WriteLine("Bronze: \n" + winners[3]);
+            WriteLine("Fifth: \n" + winners[4]);
 
             winners = Util.PickWinners(employees);
-            Console.WriteLine("Here are three winners: ");
-            Console.WriteLine("Gold: \n" + winners[0]);
-            Console.WriteLine("Silver: \n" + winners[1]);
-            Console.WriteLine("Bronze: \n" + winners[2]);
+            WriteLine("Here are three winners: ");
+            WriteLine("Gold: \n" + winners[0]);
+            WriteLine("Silver: \n" + winners[1]);
+            WriteLine("Bronze: \n" + winners[2]);
 
-            Console.ReadKey();
         }
 
         public static void SendLetter()
         {
 
-            Console.WriteLine("Welcome! Would you like to send a normal or certified letter? ");
-            Console.WriteLine("[1] Normal Letter");
-            Console.WriteLine("[2] Certified Letter");
-            int choice = GetIntInput(Console.ReadLine());
-            Console.WriteLine("Please enter the recipient's name: ");
-            string recipient = Console.ReadLine();
+            WriteLine("Welcome! Would you like to send a normal or certified letter? ");
+            WriteLine("[1] Normal Letter");
+            WriteLine("[2] Certified Letter");
+            int choice = Util.GetIntInput(ReadLine(), 1, 2);
+            WriteLine("Please enter the recipient's name: ");
+            string recipient = ReadLine();
 
             if (choice == 1)
             {
-                Console.WriteLine("Letter Details: ");
+                WriteLine("Your Letter has been sent successfully!");
+                WriteLine("Letter Details: ");
                 Letter letter = new Letter(DateTime.Now, recipient);
-                Console.WriteLine("Date: " + letter.Date.ToString());
-                Console.WriteLine("Recipient: " + letter.Recipient.ToString());
-                Console.WriteLine();
+                WriteLine("Date: " + letter.Date.ToString());
+                WriteLine("Recipient: " + letter.Recipient.ToString());
+                WriteLine();
             }
             else if (choice == 2)
             {
-                Console.WriteLine("Letter Details: ");
+                WriteLine("Letter Details: ");
                 CertifiedLetter letter = new CertifiedLetter(new Random().Next(0,99999), DateTime.Now, recipient);
-                Console.WriteLine("Date: " + letter.Date.ToString());
-                Console.WriteLine("Recipient: " + letter.Recipient.ToString());
-                Console.WriteLine("Tracking Number: " + letter.TrackingNumber.ToString());
-                Console.WriteLine();
+                WriteLine("Date: " + letter.Date.ToString());
+                WriteLine("Recipient: " + letter.Recipient.ToString());
+                WriteLine("Tracking Number: " + letter.TrackingNumber.ToString());
+                WriteLine();
             }
 
-            Console.WriteLine("Thank you have a nice day!");
+            WriteLine("Thank you have a nice day!");
         }
 
         public static void Cookies()
         {
-            Console.WriteLine("Hello User! What shall I call you? ");
-            string userName = Console.ReadLine();
-            Console.WriteLine("Hello " + userName + ". What's your favorite type of cookie?");
-            string cookieType = Console.ReadLine();
-            Console.WriteLine("How many cookies would you like? ");
-            int quantityDesired = GetIntInput(Console.ReadLine(), 0, int.MaxValue);
-            Console.WriteLine("Anything special we should know when making your cookies? If not simply press return without entering anything.");
-            string specialRequests = Console.ReadLine();
-            Console.WriteLine("Thank you for placing an order. Here is your invoice: ");
+            WriteLine("Hello User! What shall I call you? ");
+            string userName = ReadLine();
+            WriteLine("Hello " + userName + ". What's your favorite type of cookie?");
+            string cookieType = ReadLine();
+            WriteLine("How many cookies would you like? ");
+            int quantityDesired = Util.GetIntInput(ReadLine(), 1, int.MaxValue);
+            WriteLine("Anything special we should know when making your cookies? If not simply press return without entering anything.");
+            string specialRequests = ReadLine();
+            WriteLine("Thank you for placing an order. Here is your invoice: ");
 
             if (specialRequests.Length < 1)
             {
                 CookieOrder cookieOrder = new CookieOrder(userName, Convert.ToUInt32(new Random().Next(10000)), Convert.ToUInt32(quantityDesired), cookieType);
-                Console.WriteLine(cookieOrder.ToString());
+                WriteLine(cookieOrder.ToString());
             }
             else
             {
                 SpecialCookieOrder specialCookieOrder = new SpecialCookieOrder(userName, Convert.ToUInt32(new Random().Next(10000)), Convert.ToUInt32(quantityDesired), cookieType, specialRequests);
-                Console.WriteLine(specialCookieOrder.ToString());
+                WriteLine(specialCookieOrder.ToString());
             }
-
-            Console.ReadKey();
-
-
-
-
-
 
         }
 
-        public static int GetIntInput(string userInput, int min = int.MinValue, int max = int.MaxValue)
+        public static void Housing()
         {
-            int i;
-            while (!int.TryParse(userInput, out i) && i < min && i > max)
+            WriteLine("Welcome! Would you like to find a Single Family housing or Multi Unit?? ");
+            WriteLine("[1] Single Family");
+            WriteLine("[2] Multi Units");
+            int choice = Util.GetIntInput(ReadLine(), 1, 2);
+            if(choice == 1)
             {
-                Console.WriteLine("Please enter a valid number.");
-                userInput = Console.ReadLine();
+                SingleFamily singleFamily = new SingleFamily(2019, "8674 Victoria Lane", "Type 2", "MTL Maids", false, 3,1, 900.0m, 2500, 1, 3);
+                WriteLine("Here is your Single Family House: ");
+                WriteLine(singleFamily.ToString());
             }
-            return i;
+            else if(choice == 2)
+            {
+                MultiUnits multiUnits = new MultiUnits(2019, "8674 Victoria Lane", "Type 2", "MTL Maids", false, 4, 900.0m);
+                WriteLine("Here is your Multi Unit House: ");
+                WriteLine(multiUnits.ToString());
+            }
+            else
+            {
+                WriteLine("Error Processing Housing Choice. Exiting...");
+            }
         }
+
+
 
 
 

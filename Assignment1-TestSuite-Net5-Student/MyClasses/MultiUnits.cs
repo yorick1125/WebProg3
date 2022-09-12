@@ -10,7 +10,6 @@ namespace Assignment1
     {
         public const int MONTHSINAYEAR = 12;
 
-        public string Address { get; set; }
         public int NoOfUnits { get; set; }
         public decimal RentAmountPerUnit { get; set; }
         public MultiUnits()
@@ -28,18 +27,22 @@ namespace Assignment1
             RentAmountPerUnit = rentAmt_;
         }
 
+        public MultiUnits(int year_) : base(year_)
+        {
+        }
+
+       public MultiUnits(int year_, string addr_, string constructionType_, string cleaningCrew_, bool insuranceClaimHistory_, int numberUnits_, decimal rentAmt_) : base(year_, addr_, constructionType_, cleaningCrew_, insuranceClaimHistory_)
+        {
+            NoOfUnits = numberUnits_;
+            RentAmountPerUnit = rentAmt_;
+        }
+
         public decimal ProjectedRentalAmt()
         {
             return RentAmountPerUnit * NoOfUnits * MONTHSINAYEAR;
         }
 
-        public override bool Equals(object obj)
-        {
-            return obj is MultiUnits units &&
-                   Address == units.Address &&
-                   NoOfUnits == units.NoOfUnits &&
-                   RentAmountPerUnit == units.RentAmountPerUnit;
-        }
+
 
         public override int GetHashCode()
         {
@@ -48,9 +51,17 @@ namespace Assignment1
 
         public override string ToString()
         {
-            return "Address: " + Address + "\n" +
+            return base.ToString() + "\n" +
                     "Number of Units: " + NoOfUnits + "\n" +
                     "Monthly Rent Per Unit: " + RentAmountPerUnit + "\n";
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is MultiUnits units &&
+                   base.Equals(obj) &&
+                   NoOfUnits == units.NoOfUnits &&
+                   RentAmountPerUnit == units.RentAmountPerUnit;
         }
     }
 }

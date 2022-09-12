@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using static System.Console;
 namespace Assignment1
 {
     public class Util
@@ -64,6 +64,17 @@ namespace Assignment1
             }
 
             return winners;
+        }
+
+        public static int GetIntInput(string userInput, int min = int.MinValue, int max = int.MaxValue)
+        {
+            int i;
+            while (!int.TryParse(userInput, out i) || i < min || i > max)
+            {
+                WriteLine("Please enter a valid number.");
+                userInput = ReadLine();
+            }
+            return i;
         }
 
     }

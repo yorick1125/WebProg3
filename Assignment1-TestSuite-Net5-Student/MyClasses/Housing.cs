@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+* Course: 		Web Programming 3
+* Assessment: 	Assignment 1
+* Created by: 	Yorick-Ntwari Niyonkuru
+* Date: 		10 September 2022
+* Class Name: 	Housing.cs
+* Description: 	Base class for all housing classes such as SingleFamily or MultiUnits.
+    */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,7 +45,6 @@ namespace Assignment1
         {
             return obj is Housing housing &&
                    Year == housing.Year &&
-                   Address == housing.Address &&
                    ConstructionType == housing.ConstructionType &&
                    CleaningCrew == housing.CleaningCrew &&
                    InsuranceClaimHistory == housing.InsuranceClaimHistory;

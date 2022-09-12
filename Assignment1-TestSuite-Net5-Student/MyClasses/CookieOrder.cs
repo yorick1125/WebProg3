@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+* Course: 		Web Programming 3
+* Assessment: 	Assignment 1
+* Created by: 	Yorick-Ntwari Niyonkuru
+* Date: 		10 September 2022
+* Class Name: 	CookieOrder.cs
+* Description: 	Stores all data regarding cookie orders.
+    */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,7 +53,7 @@ namespace Assignment1
                 "Order Number: " + OrderNumber + "\n" +
                 "Quantity: " + Quantity + "\n" +
                 "CookieType: " + CookieType + "\n" +
-                "Total Price: " + TotalPrice + "\n"
+                "Total Price: " + TotalPrice.ToString("C") + "\n"
                 ;
         }
 

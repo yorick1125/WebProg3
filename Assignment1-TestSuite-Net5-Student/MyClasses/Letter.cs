@@ -11,6 +11,11 @@ namespace Assignment1
         public DateTime Date { get; set; }
         public string Recipient { get; set; }
 
+        public Letter()
+        {
+
+        }
+
         public Letter(DateTime date_, string recipient_)
         {
             Date = date_;
@@ -19,7 +24,7 @@ namespace Assignment1
 
         public override string ToString()
         {
-            return "Date: " + Date + "\n" +
+            return "Date: " + Date.ToString() + "\n" +
                 "Recipient: " + Recipient;
         }
 
