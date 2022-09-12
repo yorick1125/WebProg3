@@ -42,30 +42,25 @@ namespace Assignment1
 
         }
 
-    //PickWinners implementation must be efficient
-    //and not affect the original Employee List
-    //Comment the algorithm used: how did you picked the winners? 
         public static List<Employee> PickWinners(List<Employee> list, int winnersNum = 3)
         {
-            List<Employee> winners = new List<Employee>();
             int randomNumber;
 
-            // storing used numbers in a dictionnary so we can check for duplicates using O(1) time complexity
-            Dictionary<int, int> usedNumbers = new Dictionary<int, int>();
+            // storing employees in a hashset so we can avoid duplicates
+            HashSet<Employee> winners = new HashSet<Employee>();
+            // keep adding random employees until we hit the maximum
             while (winners.Count() < winnersNum)
             {
                 randomNumber = new Random().Next(0, list.Count());
-                // if we don't already have a duplicate
-                if (!usedNumbers.ContainsValue(randomNumber))
-                {
-                    winners.Add(list[randomNumber]);
-                    usedNumbers.Add(randomNumber, randomNumber);
-                }
+                winners.Add(list[randomNumber]);
             }
 
-            return winners;
+            return winners.ToList();
         }
 
+        /**
+         * Helper function for getting integer inputs. Can send in a min and max value that is acceptable.
+         */
         public static int GetIntInput(string userInput, int min = int.MinValue, int max = int.MaxValue)
         {
             int i;

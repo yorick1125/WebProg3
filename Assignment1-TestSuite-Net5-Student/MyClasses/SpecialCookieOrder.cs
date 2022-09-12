@@ -3,8 +3,8 @@
 * Assessment: 	Assignment 1
 * Created by: 	Yorick-Ntwari Niyonkuru
 * Date: 		12 September 2022
-* Class Name: 	MultiUnits.cs
-* Description: 	Stores all data regarding multi-unit housings.
+* Class Name: 	SpecialCookieOrder.cs
+* Description: 	Stores all data regarding special .
     */
 
 using System;
