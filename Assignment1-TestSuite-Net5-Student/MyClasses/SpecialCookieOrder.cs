@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+* Course: 		Web Programming 3
+* Assessment: 	Assignment 1
+* Created by: 	Yorick-Ntwari Niyonkuru
+* Date: 		12 September 2022
+* Class Name: 	MultiUnits.cs
+* Description: 	Stores all data regarding multi-unit housings.
+    */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,6 +39,11 @@ namespace Assignment1
         {
             return base.CalculatePrice() + HANDLINGFEE;
 
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(base.GetHashCode(), CustomerName, OrderNumber, Quantity, CookieType, TotalPrice, Description);
         }
     }
 }

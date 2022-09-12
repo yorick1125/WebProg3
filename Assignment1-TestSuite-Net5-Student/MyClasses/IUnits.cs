@@ -4,7 +4,7 @@
 * Created by: 	Yorick-Ntwari Niyonkuru
 * Date: 		10 September 2022
 * Class Name: 	IUnits.cs
-* Description: 	Interface for all housing elements   .
+* Description: 	Interface for all housing elements.
     */
 
 using System;

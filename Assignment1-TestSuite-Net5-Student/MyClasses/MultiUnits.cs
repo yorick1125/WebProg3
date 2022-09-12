@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+* Course: 		Web Programming 3
+* Assessment: 	Assignment 1
+* Created by: 	Yorick-Ntwari Niyonkuru
+* Date: 		12 September 2022
+* Class Name: 	MultiUnits.cs
+* Description: 	Stores all data regarding multi-unit housings.
+    */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,9 +36,7 @@ namespace Assignment1
             RentAmountPerUnit = rentAmt_;
         }
 
-        public MultiUnits(int year_) : base(year_)
-        {
-        }
+
 
        public MultiUnits(int year_, string addr_, string constructionType_, string cleaningCrew_, bool insuranceClaimHistory_, int numberUnits_, decimal rentAmt_) : base(year_, addr_, constructionType_, cleaningCrew_, insuranceClaimHistory_)
         {

@@ -271,6 +271,20 @@ namespace MyClassesTest
             }
         }
 
+        [TestMethod]
+        public void SpecialCookieOrderGetHashCode()
+        {
+            uint quantity = 10;
+            SpecialCookieOrder s = new SpecialCookieOrder("Dany", ++orderNumber, quantity, "Ginger Bread Soldiers", "Extra hazelnuts");
+            SpecialCookieOrder s2 = new SpecialCookieOrder("Dany", orderNumber, quantity, "Ginger Bread Soldiers", "Extra hazelnuts");
+            HashSet<SpecialCookieOrder> specialOrders = new HashSet<SpecialCookieOrder>();
+            specialOrders.Add(s);
+            specialOrders.Add(s2);
+
+            Assert.IsTrue(s.GetHashCode() == s2.GetHashCode());
+            Assert.IsTrue(specialOrders.Count == 1);
+        }
+
         #endregion
 
 
@@ -582,6 +596,18 @@ namespace MyClassesTest
             }
         }
 
+        [TestMethod]
+        public void SingleFamilyCreateParams()
+        {
+            try
+            {
+                SingleFamily singleFamily = new SingleFamily(2019, "8674 Victoria Lane", "Type 2", "MTL Maids", false, 3,1, 900.0m, 2500, 1, 3);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
 
         [TestMethod]
         public void SingleFamilyGetNumBedrooms()
@@ -813,6 +839,19 @@ namespace MyClassesTest
             try
             {
                 MultiUnits multiUnits = new MultiUnits("8674 Victoria Lane");
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void MultiUnitCons5Param()
+        {
+            try
+            {
+                MultiUnits multiUnits = new MultiUnits(2019, "8674 Victoria Lane", "Type 2", "MTL Maids", false, 4, 900.0m);
             }
             catch (Exception e)
             {
@@ -1109,6 +1148,19 @@ namespace MyClassesTest
                 Letter CertLetter = new CertifiedLetter(123456, DateTime.Now, "Claudiu S.");
 
                 Assert.IsTrue(CertLetter.ToString().Contains("Claudiu"));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+        }
+
+        [TestMethod]
+        public void LetterDefaultCons()
+        {
+            try
+            {
+                Letter Letter = new Letter();
             }
             catch (Exception e)
             {

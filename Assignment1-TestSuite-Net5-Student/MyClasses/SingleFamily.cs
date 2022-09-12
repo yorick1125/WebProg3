@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+* Course: 		Web Programming 3
+* Assessment: 	Assignment 1
+* Created by: 	Yorick-Ntwari Niyonkuru
+* Date: 		12 September 2022
+* Class Name: 	SingleFamily.cs
+* Description: 	Stores all data regarding single family housings.
+    */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,9 +61,6 @@ namespace Assignment1
         }
 
 
-        public SingleFamily(int year_) : base(year_)
-        {
-        }
 
 
 

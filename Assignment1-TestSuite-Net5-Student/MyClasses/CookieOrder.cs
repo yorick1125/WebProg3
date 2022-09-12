@@ -2,9 +2,9 @@
 * Course: 		Web Programming 3
 * Assessment: 	Assignment 1
 * Created by: 	Yorick-Ntwari Niyonkuru
-* Date: 		10 September 2022
-* Class Name: 	CookieOrder.cs
-* Description: 	Stores all data regarding cookie orders.
+* Date: 		12 September 2022
+* Class Name: 	Letter.cs
+* Description: 	Stores all data regarding letters.
     */
 
 using System;
