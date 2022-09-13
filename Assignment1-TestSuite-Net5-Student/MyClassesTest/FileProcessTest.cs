@@ -128,16 +128,24 @@ namespace MyClassesTest
         [TestMethod]
         public void CookieOrderGetHashCode()
         {
-            uint quantity = 24;
-            CookieOrder c = new CookieOrder("Philip", ++orderNumber, quantity, "Nutella Cookies");
-            CookieOrder c2 = new CookieOrder("Philip", orderNumber, quantity, "Nutella Cookies");
-            HashSet<CookieOrder> orders = new HashSet<CookieOrder>();
-            orders.Add(c);
-            orders.Add(c2);
+            try
+            {
+                uint quantity = 24;
+                CookieOrder c = new CookieOrder("Philip", ++orderNumber, quantity, "Nutella Cookies");
+                CookieOrder c2 = new CookieOrder("Philip", orderNumber, quantity, "Nutella Cookies");
+                HashSet<CookieOrder> orders = new HashSet<CookieOrder>();
+                orders.Add(c);
+                orders.Add(c2);
 
-            Assert.IsTrue(c.GetHashCode() == c2.GetHashCode());
-            Assert.IsTrue(orders.Count == 1);
-        }
+                Assert.IsTrue(c.GetHashCode() == c2.GetHashCode());
+                Assert.IsTrue(orders.Count == 1);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+}
 
         [TestMethod]
         public void SpecialCookieOrderEqualsTrue()
@@ -274,16 +282,24 @@ namespace MyClassesTest
         [TestMethod]
         public void SpecialCookieOrderGetHashCode()
         {
-            uint quantity = 10;
-            SpecialCookieOrder s = new SpecialCookieOrder("Dany", ++orderNumber, quantity, "Ginger Bread Soldiers", "Extra hazelnuts");
-            SpecialCookieOrder s2 = new SpecialCookieOrder("Dany", orderNumber, quantity, "Ginger Bread Soldiers", "Extra hazelnuts");
-            HashSet<SpecialCookieOrder> specialOrders = new HashSet<SpecialCookieOrder>();
-            specialOrders.Add(s);
-            specialOrders.Add(s2);
+            try
+            {
+                uint quantity = 10;
+                SpecialCookieOrder s = new SpecialCookieOrder("Dany", ++orderNumber, quantity, "Ginger Bread Soldiers", "Extra hazelnuts");
+                SpecialCookieOrder s2 = new SpecialCookieOrder("Dany", orderNumber, quantity, "Ginger Bread Soldiers", "Extra hazelnuts");
+                HashSet<SpecialCookieOrder> specialOrders = new HashSet<SpecialCookieOrder>();
+                specialOrders.Add(s);
+                specialOrders.Add(s2);
 
-            Assert.IsTrue(s.GetHashCode() == s2.GetHashCode());
-            Assert.IsTrue(specialOrders.Count == 1);
-        }
+                Assert.IsTrue(s.GetHashCode() == s2.GetHashCode());
+                Assert.IsTrue(specialOrders.Count == 1);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+}
 
         #endregion
 
@@ -408,25 +424,41 @@ namespace MyClassesTest
         [TestMethod]
         public void EmployeeToString()
         {
-            //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
-            Employee e = new Employee(93402, "Mike", "Cooper", "IT", "Vice-President", 250000m);
+            try
+            {
+                //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
+                Employee e = new Employee(93402, "Mike", "Cooper", "IT", "Vice-President", 250000m);
 
-            Assert.IsTrue(e.ToString().Contains("93402"));
-        }
+                Assert.IsTrue(e.ToString().Contains("93402"));
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+ }
 
         [TestMethod]
         public void EmployeeGetHashCode()
         {
-            //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
-            Employee e = new Employee(93402, "Mike", "Cooper", "IT", "Vice-President", 250000m);
-            Employee e2 = new Employee(93402, "Mike", "Cooper", "IT", "Vice-President", 250000m);
-            HashSet<Employee> employees = new HashSet<Employee>();
-            employees.Add(e);
-            employees.Add(e2);
+            try
+            {
+                //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
+                Employee e = new Employee(93402, "Mike", "Cooper", "IT", "Vice-President", 250000m);
+                Employee e2 = new Employee(93402, "Mike", "Cooper", "IT", "Vice-President", 250000m);
+                HashSet<Employee> employees = new HashSet<Employee>();
+                employees.Add(e);
+                employees.Add(e2);
 
-            Assert.IsTrue(e.GetHashCode() == e2.GetHashCode());
-            Assert.IsTrue(employees.Count == 1);
-        }
+                Assert.IsTrue(e.GetHashCode() == e2.GetHashCode());
+                Assert.IsTrue(employees.Count == 1);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+}
 
         [TestMethod]
         public void EmployeeGenerate25UniqueEmployee()
@@ -788,16 +820,24 @@ namespace MyClassesTest
         [TestMethod]
         public void SingleFamilyGetHashCode()
         {
-            //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
-            SingleFamily f = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
-            SingleFamily f2 = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
-            HashSet<SingleFamily> families = new HashSet<SingleFamily>();
-            families.Add(f);
-            families.Add(f2);
+            try
+            {
+                //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
+                SingleFamily f = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
+                SingleFamily f2 = new SingleFamily("34 Winston Street", 3, 2, 900.00m, 2500, 1, 4);
+                HashSet<SingleFamily> families = new HashSet<SingleFamily>();
+                families.Add(f);
+                families.Add(f2);
 
-            Assert.IsTrue(f.GetHashCode() == f2.GetHashCode());
-            Assert.IsTrue(families.Count == 1);
-        }
+                Assert.IsTrue(f.GetHashCode() == f2.GetHashCode());
+                Assert.IsTrue(families.Count == 1);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+}
 
         [TestMethod]
         public void SingleFamilyYearlyRentAmount()
@@ -896,16 +936,24 @@ namespace MyClassesTest
         [TestMethod]
         public void MultiUnitsGetHashCode()
         {
-            //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
-            MultiUnits mu = new MultiUnits("8674 Victoria Lane", 2, 750.00m);
-            MultiUnits mu2 = new MultiUnits("8674 Victoria Lane", 2, 750.00m);
-            HashSet<MultiUnits> families = new HashSet<MultiUnits>();
-            families.Add(mu);
-            families.Add(mu2);
+            try
+            {
+                //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
+                MultiUnits mu = new MultiUnits("8674 Victoria Lane", 2, 750.00m);
+                MultiUnits mu2 = new MultiUnits("8674 Victoria Lane", 2, 750.00m);
+                HashSet<MultiUnits> families = new HashSet<MultiUnits>();
+                families.Add(mu);
+                families.Add(mu2);
 
-            Assert.IsTrue(mu.GetHashCode() == mu2.GetHashCode());
-            Assert.IsTrue(families.Count == 1);
-        }
+                Assert.IsTrue(mu.GetHashCode() == mu2.GetHashCode());
+                Assert.IsTrue(families.Count == 1);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+}
 
 
 
@@ -1109,15 +1157,22 @@ namespace MyClassesTest
         [TestMethod]
         public void HousingGetHashCode()
         {
-            //public Employee(uint idNumber_, string firstName_, string lastName_, string departement_, string position_, decimal yearlySalary_)
-            Housing h = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
-            Housing h2 = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
-            HashSet<Housing> families = new HashSet<Housing>();
-            families.Add(h);
-            families.Add(h2);
+            try
+            {
+                Housing h = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                Housing h2 = new Housing(2019, "9724 Bridge Street", "Type 2", "Maid Cleaning", true);
+                HashSet<Housing> families = new HashSet<Housing>();
+                families.Add(h);
+                families.Add(h2);
 
-            Assert.IsTrue(h.GetHashCode() == h2.GetHashCode());
-            Assert.IsTrue(families.Count == 1);
+                Assert.IsTrue(h.GetHashCode() == h2.GetHashCode());
+                Assert.IsTrue(families.Count == 1);
+            }
+            catch(Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+
         }
 
         #endregion
@@ -1223,16 +1278,25 @@ namespace MyClassesTest
         [TestMethod]
         public void LetterGetHashCode()
         {
-            DateTime date = DateTime.Now;
-            Letter l = new Letter(date, "Claudiu S.");
-            Letter l2 = new Letter(date, "Claudiu S.");
-            HashSet<Letter> letters = new HashSet<Letter>();
-            letters.Add(l);
-            letters.Add(l2);
+            try
+            {
+                DateTime date = DateTime.Now;
+                Letter l = new Letter(date, "Claudiu S.");
+                Letter l2 = new Letter(date, "Claudiu S.");
+                HashSet<Letter> letters = new HashSet<Letter>();
+                letters.Add(l);
+                letters.Add(l2);
 
-            Assert.IsTrue(l.GetHashCode() == l2.GetHashCode());
-            Assert.IsTrue(letters.Count == 1);
-        }
+                Assert.IsTrue(l.GetHashCode() == l2.GetHashCode());
+                Assert.IsTrue(letters.Count == 1);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+                throw;
+            }
+}
 
         [TestMethod]
         public void CertifiedLetterEqualsTrue()
@@ -1272,15 +1336,23 @@ namespace MyClassesTest
         [TestMethod]
         public void CertifiedLetterGetHashCode()
         {
-            DateTime date = DateTime.Now;
-            CertifiedLetter l = new CertifiedLetter(18271, date, "Claudiu S.");
-            CertifiedLetter l2 = new CertifiedLetter(18271, date, "Claudiu S.");
-            HashSet<CertifiedLetter> letters = new HashSet<CertifiedLetter>();
-            letters.Add(l);
-            letters.Add(l2);
+            try
+            {
+                DateTime date = DateTime.Now;
+                CertifiedLetter l = new CertifiedLetter(18271, date, "Claudiu S.");
+                CertifiedLetter l2 = new CertifiedLetter(18271, date, "Claudiu S.");
+                HashSet<CertifiedLetter> letters = new HashSet<CertifiedLetter>();
+                letters.Add(l);
+                letters.Add(l2);
 
-            Assert.IsTrue(l.GetHashCode() == l2.GetHashCode());
-            Assert.IsTrue(letters.Count == 1);
+                Assert.IsTrue(l.GetHashCode() == l2.GetHashCode());
+                Assert.IsTrue(letters.Count == 1);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
+
         }
 
         #endregion

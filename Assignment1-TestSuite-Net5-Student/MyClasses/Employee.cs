@@ -35,6 +35,8 @@ namespace Assignment1
         public Employee(string name_, uint idNumber_)
         {
             Id = idNumber_;
+
+            // check if the name given is one word or contains a first and last name
             string[] names = name_.Split(" ");
             if(names.Length > 1)
             {

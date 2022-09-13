@@ -1,0 +1,355 @@
+
+
+Debug Trace:
+Employee List
+Employee ID: 1468 
+First Name: Daniel 
+Last Name: Taddio 
+Department: IT 
+Position: Senior 
+Yearly Salary: 83631 
+
+Employee ID: 5805 
+First Name: Philip 
+Last Name: Taddio 
+Department: Management 
+Position: GOD 
+Yearly Salary: 31626 
+
+Employee ID: 3030 
+First Name: Mansi 
+Last Name: Dumas 
+Department: Management 
+Position: GOD 
+Yearly Salary: 72654 
+
+Employee ID: 7643 
+First Name: Daniel 
+Last Name: Boucher 
+Department: Management 
+Position: Junior 
+Yearly Salary: 42598 
+
+Employee ID: 7576 
+First Name: Vathusan 
+Last Name: Vimalarajan 
+Department: Finance 
+Position: Junior 
+Yearly Salary: 44081 
+
+Employee ID: 5947 
+First Name: Mansi 
+Last Name: Dumas 
+Department: Management 
+Position: GOD 
+Yearly Salary: 52796 
+
+Employee ID: 2970 
+First Name: Braeden 
+Last Name: Clahane 
+Department: Software 
+Position: Intermediate 
+Yearly Salary: 47254 
+
+Employee ID: 1274 
+First Name: Bhavik 
+Last Name: Chieshvili 
+Department: Finance 
+Position: Junior 
+Yearly Salary: 65880 
+
+Employee ID: 1360 
+First Name: Daniel 
+Last Name: Tylbor 
+Department: Finance 
+Position: GOD 
+Yearly Salary: 62228 
+
+Employee ID: 2864 
+First Name: Mansi 
+Last Name: Flores 
+Department: Management 
+Position: Senior 
+Yearly Salary: 61424 
+
+Employee ID: 6551 
+First Name: Philip 
+Last Name: Pichette 
+Department: Finance 
+Position: GOD 
+Yearly Salary: 35487 
+
+Employee ID: 7814 
+First Name: Braeden 
+Last Name: Taddio 
+Department: Legal 
+Position: Intermediate 
+Yearly Salary: 41247 
+
+Employee ID: 2864 
+First Name: Mansi 
+Last Name: Dumas 
+Department: Finance 
+Position: Intermediate 
+Yearly Salary: 80070 
+
+Employee ID: 6642 
+First Name: Yorick 
+Last Name: Niyonkuru 
+Department: Management 
+Position: Senior 
+Yearly Salary: 61082 
+
+Employee ID: 5284 
+First Name: Liam 
+Last Name: Pichette 
+Department: Finance 
+Position: Junior 
+Yearly Salary: 43052 
+
+Employee ID: 9879 
+First Name: Mansi 
+Last Name: Dumas 
+Department: Legal 
+Position: Intermediate 
+Yearly Salary: 70379 
+
+Employee ID: 4112 
+First Name: Bhavik 
+Last Name: Chieshvili 
+Department: Management 
+Position: GOD 
+Yearly Salary: 48407 
+
+Employee ID: 7377 
+First Name: Michael 
+Last Name: Clahane 
+Department: Management 
+Position: Intermediate 
+Yearly Salary: 42434 
+
+Employee ID: 2692 
+First Name: Daniel 
+Last Name: Flores 
+Department: Finance 
+Position: GOD 
+Yearly Salary: 66847 
+
+Employee ID: 3910 
+First Name: Yorick 
+Last Name: Clahane 
+Department: IT 
+Position: Junior 
+Yearly Salary: 99342 
+
+Employee ID: 2407 
+First Name: Yorick 
+Last Name: Bhardwaj 
+Department: Management 
+Position: GOD 
+Yearly Salary: 69614 
+
+Employee ID: 9601 
+First Name: David 
+Last Name: Clahane 
+Department: Finance 
+Position: Intermediate 
+Yearly Salary: 86916 
+
+Employee ID: 1464 
+First Name: Michael 
+Last Name: Niyonkuru 
+Department: Finance 
+Position: GOD 
+Yearly Salary: 51640 
+
+Employee ID: 1578 
+First Name: Yorick 
+Last Name: Bhardwaj 
+Department: Finance 
+Position: Senior 
+Yearly Salary: 73614 
+
+Employee ID: 8350 
+First Name: David 
+Last Name: Taddio 
+Department: Finance 
+Position: Intermediate 
+Yearly Salary: 55722 
+
+HashSet Employee List
+Employee ID: 1468 
+First Name: Daniel 
+Last Name: Taddio 
+Department: IT 
+Position: Senior 
+Yearly Salary: 83631 
+
+Employee ID: 5805 
+First Name: Philip 
+Last Name: Taddio 
+Department: Management 
+Position: GOD 
+Yearly Salary: 31626 
+
+Employee ID: 3030 
+First Name: Mansi 
+Last Name: Dumas 
+Department: Management 
+Position: GOD 
+Yearly Salary: 72654 
+
+Employee ID: 7643 
+First Name: Daniel 
+Last Name: Boucher 
+Department: Management 
+Position: Junior 
+Yearly Salary: 42598 
+
+Employee ID: 7576 
+First Name: Vathusan 
+Last Name: Vimalarajan 
+Department: Finance 
+Position: Junior 
+Yearly Salary: 44081 
+
+Employee ID: 5947 
+First Name: Mansi 
+Last Name: Dumas 
+Department: Management 
+Position: GOD 
+Yearly Salary: 52796 
+
+Employee ID: 2970 
+First Name: Braeden 
+Last Name: Clahane 
+Department: Software 
+Position: Intermediate 
+Yearly Salary: 47254 
+
+Employee ID: 1274 
+First Name: Bhavik 
+Last Name: Chieshvili 
+Department: Finance 
+Position: Junior 
+Yearly Salary: 65880 
+
+Employee ID: 1360 
+First Name: Daniel 
+Last Name: Tylbor 
+Department: Finance 
+Position: GOD 
+Yearly Salary: 62228 
+
+Employee ID: 2864 
+First Name: Mansi 
+Last Name: Flores 
+Department: Management 
+Position: Senior 
+Yearly Salary: 61424 
+
+Employee ID: 6551 
+First Name: Philip 
+Last Name: Pichette 
+Department: Finance 
+Position: GOD 
+Yearly Salary: 35487 
+
+Employee ID: 7814 
+First Name: Braeden 
+Last Name: Taddio 
+Department: Legal 
+Position: Intermediate 
+Yearly Salary: 41247 
+
+Employee ID: 2864 
+First Name: Mansi 
+Last Name: Dumas 
+Department: Finance 
+Position: Intermediate 
+Yearly Salary: 80070 
+
+Employee ID: 6642 
+First Name: Yorick 
+Last Name: Niyonkuru 
+Department: Management 
+Position: Senior 
+Yearly Salary: 61082 
+
+Employee ID: 5284 
+First Name: Liam 
+Last Name: Pichette 
+Department: Finance 
+Position: Junior 
+Yearly Salary: 43052 
+
+Employee ID: 9879 
+First Name: Mansi 
+Last Name: Dumas 
+Department: Legal 
+Position: Intermediate 
+Yearly Salary: 70379 
+
+Employee ID: 4112 
+First Name: Bhavik 
+Last Name: Chieshvili 
+Department: Management 
+Position: GOD 
+Yearly Salary: 48407 
+
+Employee ID: 7377 
+First Name: Michael 
+Last Name: Clahane 
+Department: Management 
+Position: Intermediate 
+Yearly Salary: 42434 
+
+Employee ID: 2692 
+First Name: Daniel 
+Last Name: Flores 
+Department: Finance 
+Position: GOD 
+Yearly Salary: 66847 
+
+Employee ID: 3910 
+First Name: Yorick 
+Last Name: Clahane 
+Department: IT 
+Position: Junior 
+Yearly Salary: 99342 
+
+Employee ID: 2407 
+First Name: Yorick 
+Last Name: Bhardwaj 
+Department: Management 
+Position: GOD 
+Yearly Salary: 69614 
+
+Employee ID: 9601 
+First Name: David 
+Last Name: Clahane 
+Department: Finance 
+Position: Intermediate 
+Yearly Salary: 86916 
+
+Employee ID: 1464 
+First Name: Michael 
+Last Name: Niyonkuru 
+Department: Finance 
+Position: GOD 
+Yearly Salary: 51640 
+
+Employee ID: 1578 
+First Name: Yorick 
+Last Name: Bhardwaj 
+Department: Finance 
+Position: Senior 
+Yearly Salary: 73614 
+
+Employee ID: 8350 
+First Name: David 
+Last Name: Taddio 
+Department: Finance 
+Position: Intermediate 
+Yearly Salary: 55722 
+

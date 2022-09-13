@@ -12,13 +12,16 @@ namespace Assignment1
         public static void Main(string[] args)
         {
             int choice = -1;
+            ConsoleColor defaultColor = ForegroundColor;
             do
             {
                 WriteLine("Hello! Please select an option: ");
+                ForegroundColor = ConsoleColor.Yellow;
                 WriteLine("[1] Employee Winners");
                 WriteLine("[2] SendLetter");
                 WriteLine("[3] CookieBakery");
                 WriteLine("[4] Housing System");
+                ForegroundColor = defaultColor;
                 choice = Util.GetIntInput(ReadLine(), 1, 4);
                 Clear();
                 switch (choice) 
