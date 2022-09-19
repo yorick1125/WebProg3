@@ -1,0 +1,58 @@
+Students who are under 18 years of age:
+- Potts Jonathan (10)
+- Adamson Kevin (11)
+<MORE>
+
+Students who are teenagers:
+- Ammerman, Richard (14)
+- Fakhouri, Samantha (17)
+<MORE>
+
+Students who scored 80 or more in their last test:
+- Ammerman Richard (92)
+<MORE>
+
+Students who scored over 320 marks in total:
+- Potts Jonathan (327 total marks)
+<MORE>
+
+Students who scored at least 60 in all their tests:
+- Jones Bob (69 92 81 60)
+<MORE>
+
+Students grouped by first letter of last name:
+A
+   Ammerman, Richard
+   Adamson, Kevin
+F
+   Feetham, John
+   <MORE>
+G
+   <MORE for G>
+<MORE Letters>
+
+Average score of test 1: 74.91
+<MORE> Average score
+
+Students who are also teachers:
+Pepe Garcia
+<MORE>
+
+Courses of a duration of 15 weeks:
+* Basic Biology
+<MORE>
+
+Courses held in the Winter semester:
+* English Language
+<MORE>
+
+Courses grouped by semester:
+Fall
+   Intro To Computers
+   <MORE>
+Summer
+   Database I
+   <MORE>
+Winter
+   Programming I
+   <MORE>
