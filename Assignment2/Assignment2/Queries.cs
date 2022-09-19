@@ -57,9 +57,36 @@ this IEnumerable<Student> students, int score)
             return avgScores;
         }
 
+        public static IEnumerable<Student> StudentTeachers(
+this IEnumerable<Student> students, IEnumerable<Staff> staff)
+        {
+            return students.Where(student =>
+            (from staffMember in staff select staffMember.First).Contains(student.First) &&
+            (from staffMember in staff select staffMember.Last).Contains(student.Last));
+        }
+
+
+        public static IEnumerable<Course> GetCoursesByDuration(
+this IEnumerable<Course> courses, int duration)
+        {
+            return courses.Where(course => course.Duration == duration).ToList();
+        }
+
+        public static IEnumerable<Course> GetCoursesBySemester(
+this IEnumerable<Course> courses, string semester)
+        {
+            return courses.Where(course => course.Semester == semester).OrderBy(course => course.Duration).ToList();
+        }
+
+        public static IEnumerable<Course> GroupCoursesBySemester(
+this IEnumerable<Course> courses)
+        {
+            return (IEnumerable<Course>)courses.GroupBy(course => course.Semester);
+        }
+
 
 
     }
 
 }
-}
+
