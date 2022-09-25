@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+* Course: Web Programming 3
+* Assessment: 	Assignment 2
+* Created by: 	Yorick-Ntwari Niyonkuru
+* Date: 		25 September 2022
+* Class Name: 	Course.cs
+* Description: Runs the SchoolViewModel that allows the user to view Student and Staff data and output certain queries to a txt file. 
+    */
+
+using System;
 using System.Collections.Generic;
 using static System.Console;
 
@@ -8,14 +17,19 @@ namespace Assignment2
     {
         static void Main(string[] args)
         {
-            List<Student> students = Util.GenerateStudents();
 
-            int minScore = 80;
-            WriteLine(String.Format("These students scored over {0} in the last test. ", minScore));
-            foreach(Student student in students.StudentsScoringOverNumberInLastTest(minScore))
+            SchoolViewModel vm = new SchoolViewModel();
+            do
             {
-                WriteLine(student.ToString() + " scored " + student.Scores[student.Scores.Count - 1]);
-            }
+                // Keep returning to main menu until user decides to exit
+                vm.WelcomeMessage();
+                vm.PromptUserSelection();
+                vm.RunCurrentSelection();
+
+                // Clear the console
+                Clear();
+            } while (vm.currentSelection != SchoolViewModel.Selection.Exit);
+
         }
     }
 }

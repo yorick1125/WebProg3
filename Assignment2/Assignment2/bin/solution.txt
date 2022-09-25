@@ -1,0 +1,100 @@
+Students who are under 18 years of age:
+- Potts, Jonathan (10)
+- Adamson, Kevin (11)
+- Singh, Jeet (12)
+- Ammerman, Richard (14)
+- Jones, Bob (15)
+- Garcia, Hugo (15)
+- Simpson, Claire (17)
+- Fakhouri, Samantha (17)
+
+Students who are teenagers:
+- Ammerman, Richard (14)
+- Fakhouri, Samantha (17)
+- Garcia, Hugo (15)
+- Jones, Bob (15)
+- Simpson, Claire (17)
+- Song, Roger (19)
+
+Students who scored 80 or more in their last test:
+- Ammerman, Richard (92)
+- Feetham, John (91)
+
+Students who scored over 320 marks in total:
+- Potts, Jonathan (327 total marks)
+- Fakhouri, Samantha (329 total marks)
+- Garcia, Hugo (343 total marks)
+- Singh, Jeet (332 total marks)
+
+Students who scored at least 60 in all their tests:
+- Jones, Bob (69 92 81 60)
+- Feetham, John (65 94 65 91)
+- Potts, Jonathan (97 83 85 62)
+- Garcia, Hugo (92 90 83 78)
+- Ammerman, Richard (68 79 81 92)
+- Adamson, Kevin (68 71 81 79)
+- Singh, Jeet (96 85 91 60)
+
+Students grouped by first letter of last name:
+A
+   Adamson, Kevin
+   Ammerman, Richard
+F
+   Fakhouri, Samantha
+   Feetham, John
+G
+   Garcia, Pepe
+   Garcia, Hugo
+J
+   Jones, Bob
+P
+   Potts, Jonathan
+S
+   Simpson, Claire
+   Singh, Jeet
+   Song, Roger
+
+Average score of test 1: 74.91
+Average score of test 2: 82.55
+Average score of test 3: 81.36
+Average score of test 4: 66.36
+
+Students who are also teachers:
+Jones, Bob
+Feetham, John
+Garcia, Pepe
+Singh, Jeet
+
+Courses of a duration of 15 weeks:
+* Intro To Computers
+* Programming I
+* Programming II
+* Pure Mathematics
+* Basic Biology
+* Basic Chemistry
+
+Courses held in the Winter semester:
+* English Language
+* English Literature
+* Programming I
+* Basic Biology
+
+Courses grouped by semester:
+Fall
+   Intro To Computers
+   Programming II
+   Pure Mathematics
+   More English Language
+   More English Literatute
+   Basic Chemistry
+Winter
+   Programming I
+   English Language
+   English Literature
+   Basic Biology
+Summer
+   Database I
+   Database II
+   Applied Mathematics
+   Basic Physics
+

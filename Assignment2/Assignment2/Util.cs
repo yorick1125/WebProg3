@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using static System.Console;
 
 namespace Assignment2
 {
     public class Util
     {
-        public static List<Student> GenerateStudents()
+        private static string DefaultFilePath { get { return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); } }
+
+        public static List<Student> GetStudents()
         {
             return new List<Student>
             {
@@ -24,7 +28,7 @@ namespace Assignment2
             };
         }
 
-        public static List<Staff> GenerateStaffs()
+        public static List<Staff> GetStaff()
         {
             return new List<Staff>
             {
@@ -40,7 +44,7 @@ namespace Assignment2
             };
         }
 
-        public static List<Course> GenerateCourses()
+        public static List<Course> GetCourses()
         {
             return new List<Course>
             {
@@ -59,6 +63,43 @@ namespace Assignment2
                 new Course{Code="123Y",Name="Basic Chemistry",Semester="Fall",Duration=15},
                 new Course{Code="123X",Name="Basic Physics",Semester="Summer",Duration=8}
             };
+
+        }
+
+        /**
+        * Helper function for getting integer inputs. Can send in a min and max value that is acceptable.
+        */
+        public static int GetIntInput(string userInput, int min = int.MinValue, int max = int.MaxValue)
+        {
+            int i;
+            while (!int.TryParse(userInput, out i) || i < min || i > max)
+            {
+                WriteLine("Please enter a valid number.");
+                userInput = ReadLine();
+            }
+            return i;
+        }
+
+        // Write file using StreamWriter  
+        public static void WriteToFile(StringBuilder builder, string filePath)
+        {
+            string filename = "solution.txt";
+            StreamWriter writer = new StreamWriter(Path.Combine(filePath, filename));
+            //if (!File.Exists(Path.Combine(filePath, filename)))
+            //{
+            //    File.Create(Path.Combine(filePath, filename));
+            //}
+
+            try
+            {
+                writer.Write(builder.ToString());
+                writer.Close();
+            }
+            catch (Exception e)
+            {
+                writer.Close();
+                throw e;
+            }
 
         }
     }
