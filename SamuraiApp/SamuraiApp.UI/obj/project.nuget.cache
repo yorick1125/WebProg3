@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DkhHUmLWk04GqkkkpstSOWm5cdqgqAUOwdXu7s8igmvA3EuS6Y7a6dAOU6yvC+1rduHvgS3xTlq6BzNOtgj4CA==",
+  "dgSpecHash": "lqQJz86jSyPF9duQi6LuhBz6m7hlnOBVkobvD+4BgTt7aN/00WveWnypJshHNpjuGmdBdA/hyYbhO+mSoSVNgw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yoric\\source\\repos\\SamuraiApp\\SamuraiApp.UI\\SamuraiApp.UI.csproj",
+  "projectFilePath": "C:\\Users\\Yoric\\Documents\\GitHub\\WebProg3\\SamuraiApp\\SamuraiApp.UI\\SamuraiApp.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yoric\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

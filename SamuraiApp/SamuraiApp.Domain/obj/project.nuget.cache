@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FqE9qLT6hOImH6OwUW5SqV2j+mAMaFcWaLuYO6npbsZcjDumWDHystzXZI1oFLZ/DeY9vsrK/l+gCxkpoyL4AA==",
+  "dgSpecHash": "oj35DmYf6KpQmoVTpS89lyDxgmHG2Bd25fhy9jVC8z9jHXu46qlImUuYgSjDP7dm98HpiWws2EvdMXWicDc1/g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yoric\\source\\repos\\SamuraiApp\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Yoric\\Documents\\GitHub\\WebProg3\\SamuraiApp\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

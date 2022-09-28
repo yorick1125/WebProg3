@@ -10,3 +10,15 @@ C:\Users\Yoric\source\repos\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\Samura
 C:\Users\Yoric\source\repos\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\SamuraiApp.Domain.dll
 C:\Users\Yoric\source\repos\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\ref\SamuraiApp.Domain.dll
 C:\Users\Yoric\source\repos\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\SamuraiApp.Domain.pdb
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\bin\Debug\net5.0\SamuraiApp.Domain.deps.json
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\bin\Debug\net5.0\SamuraiApp.Domain.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\bin\Debug\net5.0\ref\SamuraiApp.Domain.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\bin\Debug\net5.0\SamuraiApp.Domain.pdb
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\SamuraiApp.Domain.csproj.AssemblyReference.cache
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\SamuraiApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\SamuraiApp.Domain.AssemblyInfoInputs.cache
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\SamuraiApp.Domain.AssemblyInfo.cs
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\SamuraiApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\SamuraiApp.Domain.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\ref\SamuraiApp.Domain.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\SamuraiApp\SamuraiApp.Domain\obj\Debug\net5.0\SamuraiApp.Domain.pdb
