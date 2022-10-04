@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using SamuraiApp.Domain;
 
 
@@ -18,7 +19,9 @@ namespace SamuraiApp.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                @"Data Source= (localdb)\MSSQLLocalDB; Initial Catalog=SamuraiAppData;");
+                @"Data Source= (localdb)\MSSQLLocalDB; Initial Catalog=SamuraiAppData;")
+                .LogTo(Console.WriteLine, new[] {DbLoggerCategory.Database.Command.Name},
+                LogLevel.Error);
                 
             // A .mdf file will be created. The MDF file is the SQL Server Master Database File:
             // it stores users data in relational databases in the form columns, rows, fields, indexes, 
