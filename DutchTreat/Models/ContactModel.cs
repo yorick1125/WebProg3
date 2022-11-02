@@ -13,15 +13,16 @@ namespace DutchTreat.Models
         [Required]
         [MinLength(2, ErrorMessage = "Last Name must have at least 2 characters long. ")]
         [RegularExpression("^[^0-9]+$", ErrorMessage = "Last Name cannot contain numbers. ")]
-        [Display(Name = "First Name")]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
-        [RegularExpression("^[^0-9]+$", ErrorMessage = "Please enter a valid email address. ")]
+        [RegularExpression(@".*@.*\.\w{2,}", ErrorMessage = "Please enter a valid email address. ")]
         public string Email { get; set; }
 
         [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone. ")]
         public string Phone { get; set; }
 
         [Required]
