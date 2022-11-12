@@ -6,12 +6,11 @@ using System.Text;
 
 namespace Assignment3.Data
 {
-    public class ContactDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
-        public ContactDbContext(DbContextOptions<ContactDbContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-
     }
 }

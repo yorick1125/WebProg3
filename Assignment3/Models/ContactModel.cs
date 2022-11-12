@@ -16,6 +16,9 @@ namespace DutchTreat.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
+
+        [Required]
+
         [Required]
         [DataType(DataType.EmailAddress)]
         [RegularExpression(@".*@.*\.\w{2,}", ErrorMessage = "Please enter a valid email address. ")]
