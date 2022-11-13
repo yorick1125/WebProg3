@@ -1,4 +1,12 @@
-﻿@model DutchTreat.Models.ContactModel
+﻿@*
+    Course: Web Programming 3
+    Assessment: Assignment 3
+    Created by: Yorick-Ntwari Niyonkuru
+    Date:  12 November 2022
+    Class Name: Contact.cshtml
+*@
+
+@model Assignment3.Models.ContactModel
 
 @{
     ViewData["Title"] = "Contact";
@@ -14,50 +22,79 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
+                <input id="first" asp-for="FirstName" class="form-control" />
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
+                <input id="last" asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PostalCo" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
+                <label asp-for="PostalCode" class="control-label"></label>
+                <input id="postal" asp-for="PostalCode" class="form-control" />
+                <span asp-validation-for="PostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input id="email" asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Topic" class="control-label"></label>
+                <select asp-for="Topic" class="form-control" asp-items="@(new SelectList(ContactModel.Topics))">
+                    <option id="topic" selected="selected" disabled>Select Topic</option>
+                </select>
+                <span asp-validation-for="Topic" class="text-danger"></span>
+
+
+            </div>
+            <div class="form-group">
                 <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
+                <input id="phone" asp-for="Phone" class="form-control" />
                 <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Topic" class="control-label"></label>
-                <input asp-for="Topic" class="form-control" />
-                <span asp-validation-for="Topic" class="text-danger"></span>
+                <label asp-for="Comments" class="control-label"></label>
+                <input id="comments" asp-for="Comments" class="form-control" />
             </div>
-            <div class="form-group">
-                <label asp-for="Message" class="control-label"></label>
-                <input asp-for="Message" class="form-control" />
-                <span asp-validation-for="Message" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Submit" class="btn btn-primary" />
-                <input type="submit" value="Reset" class="btn btn-primary" />
-            </div>
-            @*
-                Recaptcha
-            *@
 
+            <div class="g-recaptcha"
+                 data-sitekey="6LeqkgEjAAAAADkJkOO9yq52mfksJXEer4mg6vr3"
+                 data-callback="callback"></div>
+            <br />
+
+            <div class="form-group">
+                <input id="submit-button" type="submit" value="Submit" class="btn btn-primary" disabled />
+                <input type="submit" onclick="reset();" value="Reset" class="btn btn-primary" />
+            </div>
+
+
+
+
+            <script type="text/javascript">
+                function callback() {
+                    const submitButton = document.getElementById("submit-button");
+                    submitButton.removeAttribute("disabled");
+                }
+                function reset() {
+                    document.getElementById("first").innerHTML = "";
+                    document.getElementById("last").innerHTML = "";
+                    document.getElementById("postal").innerHTML = "";
+                    document.getElementById("email").innerHTML = "";
+                    document.getElementById("topic").selectedIndex = -1;
+                    document.getElementById("phone").innerHTML = "";
+                    document.getElementById("comments").innerHTML = "";
+                }
+            </script>
         </form>
-            </div>
-        </div>
+    </div>
+</div>
 
-        <div>
-            <a asp-action="Index">Back to List</a>
-        </div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
-        @section Scripts {
-            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-        }
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

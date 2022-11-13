@@ -1,9 +1,11 @@
 using Assignment3.Data;
+using Assignment3.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,13 +30,25 @@ namespace Assignment3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("DutchConnection"))
+                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
+                );
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+            services.AddRazorPages();
+            services.AddTransient<IEmailSender, SendGridEmailSender>();
+            services.Configure<SendGridEmailSenderOptions>(options => 
+            {
+                options.ApiKey = Configuration["ExternalProviders:SendGrid:ApiKey"];
+                options.SenderEmail = Configuration["ExternalProviders:SendGrid:SenderEmail"];
+                options.SenderName = Configuration["ExternalProviders:SendGrid:SenderName"];
+            });
+
+                
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
