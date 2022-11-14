@@ -15,6 +15,8 @@ namespace Assignment3.Models
 {
     public class ContactModel
     {
+        [Key]
+        public int Id { get; set; }
 
         [Required]
         [RegularExpression("^[^0-9]+$", ErrorMessage = "First Name cannot contain numbers. ")]
@@ -47,6 +49,7 @@ namespace Assignment3.Models
         [RegularExpression(@".*@.*\.\w{2,}", ErrorMessage = "Please enter a valid email address. ")]
         public string Email { get; set; }
 
+        [Required]
         public string Topic { get; set; }
 
         public static List<string> Topics 
@@ -82,7 +85,7 @@ namespace Assignment3.Models
         [MaxLength(300)]
         public string Comments { get; set; }
 
-        public DateTime CreationDate { get; set; }
+        public DateTime CreationDate { get; set;  }
 
 
     }

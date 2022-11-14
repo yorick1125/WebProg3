@@ -43,11 +43,24 @@ namespace Assignment3.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                string body = "";
+                body += contact.FirstName + "\n";
+                body += contact.LastName + "\n";
+                body += contact.PostalCode + "\n";
+                body += contact.Email + "\n";
+                body += DateTime.Now + "\n";
+                body += contact.Topic + "\n";
+                body += contact.Comments + "\n";
+                body += contact.Phone + "\n";
+
                 // send the email
-                await _emailSender.SendEmailAsync(contact.Email, contact.Topic, contact.Comments);
+                await _emailSender.SendEmailAsync(contact.Email, contact.Topic, body);
+                await _emailSender.SendEmailAsync("2021web3@gmail.com", contact.Topic, body);
 
-                // store contact in database
-
+                // store in database
+                _db.Add(contact);
+                _db.SaveChanges();
 
                 // return the view.
                 return View("Success", contact);
@@ -55,11 +68,6 @@ namespace Assignment3.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public IActionResult TopicsDropdown()
-        {
-            ContactModel model = new ContactModel();
-            return View(model);
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

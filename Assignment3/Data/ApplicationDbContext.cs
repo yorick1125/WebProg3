@@ -18,10 +18,40 @@ namespace Assignment3.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<ContactModel>()
-                .HasNoKey()
-                .Property(c => c.FirstName)
-                .HasColumnType("varchar");
+            //builder.Entity<ContactModel>()
+            //    .Property(c => c.FirstName)
+            //    .HasColumnType("varchar");
+
+            //builder.Entity<ContactModel>()
+            //    .Property(c => c.LastName)
+            //    .HasColumnType("varchar");
+
+            //builder.Entity<ContactModel>()
+            //    .Property(c => c.Email)
+            //    .HasColumnType("varchar");
+
+            //builder.Entity<ContactModel>()
+            //    .Property(c => c.Phone)
+            //    .HasColumnType("varchar");
+
+            //builder.Entity<ContactModel>()
+            //    .Property(c => c.PostalCode)
+            //    .HasColumnType("varchar");
+
+
+            //builder.Entity<ContactModel>()
+            //    .Property(c => c.Topic)
+            //    .HasColumnType("varchar");
+
+            //builder.Entity<ContactModel>()
+            //    .Property(c => c.Comments)
+            //    .HasColumnType("varchar");
+
+
+            //builder.Entity<ContactModel>()
+            //    .Property(c => c.CreationDate)
+            //    .HasColumnType("datetime");
+
 
 
 

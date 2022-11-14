@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assignment3.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221113033543_init")]
-    partial class init
+    [Migration("20221114180149_addContactModel")]
+    partial class addContactModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,11 @@ namespace Assignment3.Data.Migrations
 
             modelBuilder.Entity("Assignment3.Models.ContactModel", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.Property<string>("Comments")
                         .IsRequired()
                         .HasMaxLength(300)
@@ -39,7 +44,7 @@ namespace Assignment3.Data.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -54,7 +59,10 @@ namespace Assignment3.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Topic")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Contacts");
                 });
