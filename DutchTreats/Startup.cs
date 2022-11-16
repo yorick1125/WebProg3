@@ -1,9 +1,11 @@
 using DutchTreats.Data;
+using DutchTreats.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,9 +29,24 @@ namespace DutchTreats
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddRazorPages();
+
+            services.AddTransient<IEmailSender, SendGridEmailSender>();
+            services.Configure<SendGridEmailSenderOptions>( options =>
+            {
+                options.ApiKey = Configuration["ExternalProviders:SendGrid:ApiKey"];
+                options.SenderEmail = Configuration["ExternalProviders:SendGrid:SenderEmail"];
+                options.SenderName = Configuration["ExternalProviders:SendGrid:SenderName"];
+            });
+
+            services.AddScoped<IDutchRepository, DutchRepository>();
+
+            services.AddTransient<DutchSeeder>();
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                    Configuration.GetConnectionString("DutchConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
