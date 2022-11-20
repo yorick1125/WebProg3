@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Ecommerce.Api.Products.Db;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -10,7 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using Ecommerce.Api.Products.Interfaces;
+using Ecommerce.Api.Products.Models.Providers;
 
 namespace Ecommerce.Api.Products
 {
@@ -26,6 +29,10 @@ namespace Ecommerce.Api.Products
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddScoped<IProductsProvider, ProductsProvider>();
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddDbContext<ProductsDbContext>(options =>
             {
                 options.UseInMemoryDatabase("Products");
