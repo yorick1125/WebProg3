@@ -28,18 +28,32 @@ namespace ECommerce.Api.Orders.Providers
         {
             if (!dbContext.Orders.Any())
             {
+                List<Db.OrderItem> items = new List<Db.OrderItem>();
+                Db.OrderItem item1 = new Db.OrderItem();
+                item1.Id = 11;
+                item1.ProductId = 11;
+                item1.Quantity = 11;
+                item1.UnitPrice = 11;
+
+                Db.OrderItem item2 = new Db.OrderItem();
+                item1.Id = 12;
+                item1.ProductId = 12;
+                item1.Quantity = 12;
+                item1.UnitPrice = 12;
+
+
+                items.Add(item1);
+                items.Add(item2);
+
+
                 dbContext.Orders.Add(
                     new Db.Order() 
                     { 
                         Id = 1, CustomerId = 1, 
                         OrderDate = DateTime.Now, 
-                        Total = 12, 
-                        Items = new List<Db.OrderItem>() 
-                        { 
-                            new Db.OrderItem(), 
-                            new Db.OrderItem() 
-                        } 
-                    });
+                        Total = 2, 
+                        Items = items
+                    });;
 
                 dbContext.Orders.Add(
                     new Db.Order()
@@ -47,12 +61,8 @@ namespace ECommerce.Api.Orders.Providers
                         Id = 2,
                         CustomerId = 1,
                         OrderDate = DateTime.Now,
-                        Total = 12,
-                        Items = new List<Db.OrderItem>()
-                        {
-                            new Db.OrderItem(),
-                            new Db.OrderItem()
-                        }
+                        Total = 2,
+                        Items = items
                     });
 
                 dbContext.Orders.Add(
@@ -61,12 +71,8 @@ namespace ECommerce.Api.Orders.Providers
                         Id = 3,
                         CustomerId = 1,
                         OrderDate = DateTime.Now,
-                        Total = 12,
-                        Items = new List<Db.OrderItem>()
-                        {
-                            new Db.OrderItem(),
-                            new Db.OrderItem()
-                        }
+                        Total = 2,
+                        Items = items
                     });
 
                 dbContext.Orders.Add(
@@ -75,12 +81,8 @@ namespace ECommerce.Api.Orders.Providers
                         Id = 4,
                         CustomerId = 1,
                         OrderDate = DateTime.Now,
-                        Total = 12,
-                        Items = new List<Db.OrderItem>()
-                        {
-                            new Db.OrderItem(),
-                            new Db.OrderItem()
-                        }
+                        Total = 2,
+                        Items = items
                     });
 
                 dbContext.SaveChanges();

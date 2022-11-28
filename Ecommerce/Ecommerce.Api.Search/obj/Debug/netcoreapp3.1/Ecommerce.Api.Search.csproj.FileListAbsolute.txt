@@ -40,3 +40,7 @@ C:\Users\Yoric\Documents\GitHub\WebProg3\Ecommerce\Ecommerce.Api.Search\obj\Debu
 C:\Users\Yoric\Documents\GitHub\WebProg3\Ecommerce\Ecommerce.Api.Search\obj\Debug\netcoreapp3.1\Ecommerce.Api.Search.dll
 C:\Users\Yoric\Documents\GitHub\WebProg3\Ecommerce\Ecommerce.Api.Search\obj\Debug\netcoreapp3.1\Ecommerce.Api.Search.pdb
 C:\Users\Yoric\Documents\GitHub\WebProg3\Ecommerce\Ecommerce.Api.Search\obj\Debug\netcoreapp3.1\Ecommerce.Api.Search.genruntimeconfig.cache
+C:\Users\Yoric\Documents\GitHub\WebProg3\Ecommerce\Ecommerce.Api.Search\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Http.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\Ecommerce\Ecommerce.Api.Search\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Http.Polly.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\Ecommerce\Ecommerce.Api.Search\bin\Debug\netcoreapp3.1\Polly.dll
+C:\Users\Yoric\Documents\GitHub\WebProg3\Ecommerce\Ecommerce.Api.Search\bin\Debug\netcoreapp3.1\Polly.Extensions.Http.dll

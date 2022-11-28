@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Nft8E9VaPGdcY7oriTVT129MBvNCHYbRqmj7zCFaD/jRGCYRd64vp1J3BpFYud1px6CDeDijNeKbKz/2uUxgEQ==",
+  "dgSpecHash": "M77xj0gRwzskBFnBurDgLUBBLFp1rOSYQ3wH5hp24hJ4UZ3+f8AgSjm2a7RDXBeHl5ns7lQYO+pBqKD8HhIsFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yoric\\Documents\\GitHub\\WebProg3\\Ecommerce\\Ecommerce.Api.Products\\Ecommerce.Api.Products.csproj",
   "expectedPackageFiles": [
@@ -20,10 +20,14 @@
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.31\\microsoft.extensions.configuration.binder.3.1.31.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.31\\microsoft.extensions.dependencyinjection.3.1.31.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.31\\microsoft.extensions.dependencyinjection.abstractions.3.1.31.nupkg.sha512",
+    "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.extensions.http\\3.1.31\\microsoft.extensions.http.3.1.31.nupkg.sha512",
+    "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.extensions.http.polly\\3.1.31\\microsoft.extensions.http.polly.3.1.31.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.extensions.logging\\3.1.31\\microsoft.extensions.logging.3.1.31.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.31\\microsoft.extensions.logging.abstractions.3.1.31.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.extensions.options\\3.1.31\\microsoft.extensions.options.3.1.31.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.31\\microsoft.extensions.primitives.3.1.31.nupkg.sha512",
+    "C:\\Users\\Yoric\\.nuget\\packages\\polly\\7.1.0\\polly.7.1.0.nupkg.sha512",
+    "C:\\Users\\Yoric\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\Yoric\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"

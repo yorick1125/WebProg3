@@ -31,7 +31,7 @@ namespace ECommerce.Api.Orders
             services.AddDbContext<OrdersDbContext>(options =>
             {
                 options.UseInMemoryDatabase("Orders");
-            });
+            }, ServiceLifetime.Singleton);
             services.AddScoped<IOrdersProvider, OrderProvider>();
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
